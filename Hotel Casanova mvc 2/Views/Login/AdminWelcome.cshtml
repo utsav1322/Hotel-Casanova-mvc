@@ -1,0 +1,28 @@
+﻿@*@model Hotel_Casanova_mvc_2.Models.User*@
+
+@{
+    ViewBag.Title = "AdminWelcome";
+}
+
+<h2>AdminWelcome</h2>
+
+@model List<Hotel_Casanova_mvc_2.Models.User>
+
+<h1>Student</h1>
+
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>aVATAR</th>
+    </tr>
+    @foreach (var student in Model)
+    {
+    <tr>
+        <td>@student.FirstName</td>
+        <td>@student.LastName</td>
+        <td>@student.Avatar</td>
+
+    </tr>
+    }
+</table>

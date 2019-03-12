@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <div class="col-md-4">
+        <input type="file" id="SelectImage" /><br />
+        @*<input id="fileUpload" type="file" runat="server" /><br />*@
+
+        <a href="#" class="btn btn-sm btn-danger" onclick="UploadImage()">Upload</a>
+    </div>
+
+    <div class="col-md-4 thumbnail" id="UploadedImage"></div>
+</div>
+
+
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+<script>
+    var UploadImage = function () {
+        var file = $("#SelectImage").get(0).files;
+        var data = new FormData;
+        data.append("postedFile", file[0]);
+        $.ajax({
+            type: "POST",
+            url: "/Image/ImageUpload",
+            data: data,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                //alert("Hello: " + response.UserName + ".\nCurrent Phone Number is: " + response.Mobile);
+                if (response == "User Details Inserted Successfully") {
+                    //$("#message1").show();
+                    //$("#message2").hide();
+                    window.location.href = "/Image/SettingImage";
+                }
+                else {
+                    //$("#message1").hide();
+                    //$("#message2").show();
+                    alert("It is a failure message");
+                }
+            },
+            error: function (response) {
+                //alert("It is a  error message" + response.responseText);
+                alert("It is a  error message");
+            }
+        });
+    }
+
+</script>*@
